@@ -31,7 +31,7 @@ const SearchBar = () => {
   return (
     <form className="flex flex-wrap" onSubmit={searchSubmit}>
       <input
-        className="rounded-s-xl px-3 bg-[#ffffff5c] shadow-lg w-[40vw] md:w-[35vw]"
+        className="rounded-s-xl px-3 bg-[#ffffff5c] shadow-lg w-[40vw] border border-[#41409752] md:w-[35vw]"
         type="text"
         name="searchingLocation"
         value={SearchingData.searchingLocation}

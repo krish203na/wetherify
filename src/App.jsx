@@ -79,24 +79,26 @@
 
 // export default App;
 
-
 // ===================================================================================================================
 // ===================================================================================================================
 // ===================================================================================================================
 // ===================================================================================================================
 
-
-import React from 'react'
-import Navbar from './Components/Navbar';
+import React from "react";
+import Navbar from "./Components/Navbar";
+import HighlightCard from "./Components/HighlightCard";
+import WetherInfoSection from "./Components/WeatherInfoSection/WetherInfoSection";
 
 const App = () => {
   return (
-    <div className="min-w-[370px] bg-[rgb(227,236,245)] w-full h-full sm:bg-black md:bg-pink-700 lg:bg-green-600 xl:border-x-lime-400 2xl:bg-red-700 ">
-      <Navbar/>
+    <div className="min-w-[370px] min-h-[100%] bg-[#f5f5f5] text-white w-full h-full sm:bg-black md:bg-pink-700 lg:bg-green-600 xl:bg-[white] 2xl:bg-red-700 ">
+      <Navbar />
+      <section className="w-full h-full flex lg:flex-row flex-col">
+        <HighlightCard />
+        <WetherInfoSection />
+      </section>
     </div>
   );
-}
+};
 
-export default App
-
-
+export default App;

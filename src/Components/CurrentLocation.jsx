@@ -42,7 +42,7 @@ const CurrentLocation = () => {
   return (
     <button
       onClick={currentLocationSubmit}
-      className="flex items-center justify-center gap-2 shadow-xl rounded-xl bg-[#9bb0db] px-3 mx-[12px]"
+      className="flex items-center justify-center gap-2 shadow-xl rounded-xl bg-[#414097] text-white px-3 mx-[12px]"
       type="submit"
     >
       <i className="fa-sharp fa-solid fa-location-crosshairs"></i>

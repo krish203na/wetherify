@@ -15,7 +15,7 @@ const SearchBar = () => {
 
         setSearchingData((previousData)=>({...previousData, [name]:value}))
 
-        console.log(value)
+        // console.log(value)
     }
 
     async function searchSubmit(e) {
@@ -38,7 +38,7 @@ const SearchBar = () => {
         onChange={handleInputChange}
       />
       <button
-        className="rounded-e-xl bg-[#9bb0db] shadow-lg px-5 "
+        className="rounded-e-xl bg-[#414097] text-white shadow-lg px-5 "
         type="submit"
       >
         <i className="fa-solid fa-telescope"></i>

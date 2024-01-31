@@ -7,7 +7,8 @@ const SearchBar = () => {
         searchingLocation: ""
     })
 
-    const {searchedLocation } = useContext(ApiContext);
+    const { searchedLocation, WeatherReport, setWeatherReport } =
+      useContext(ApiContext);
 
     function handleInputChange(e)
     {
@@ -20,11 +21,21 @@ const SearchBar = () => {
 
     async function searchSubmit(e) {
         e.preventDefault();
-        let { current, location } = await searchedLocation(
+        let { current, location, forecast, alerts } = await searchedLocation(
           SearchingData.searchingLocation
         );
+        
+        setWeatherReport((prevData) => ({
+          ...prevData,
+          current: current,
+          location: location,
+          forecast: forecast,
+          alerts: alerts,
+        }));
         console.log(current)
         console.log(location)
+        console.log(forecast);
+        console.log(alerts);
     }
 
 

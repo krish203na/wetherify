@@ -1,14 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ApiContext from "../Context/ApiContext";
 
+// getLocation();
+
 const CurrentLocation = () => {
-  const { searchedLocation } = useContext(ApiContext);
+  const { searchedLocation, WeatherReport, setWeatherReport } =
+    useContext(ApiContext);
 
   const [locationData, setLocationData] = useState({
     latitude: "",
     longitude: "",
   });
-
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -24,20 +26,45 @@ const CurrentLocation = () => {
       longitude: position.coords.longitude,
     }));
   }
-
-  setTimeout(() => {
+  useEffect(() => {
+    // setTimeout(() => {
     getLocation();
-  }, 0);
 
+    async function starter() {
+      // console.log(locationData.latitude);
+      let { current, location, forecast, alerts } = await searchedLocation(
+        `Maharashtra`
+      );
+
+      setWeatherReport((prevData) => ({
+        ...prevData,
+        current: current,
+        location: location,
+        forecast: forecast,
+        alerts: alerts,
+      }));
+
+    }
+    starter();
+    // }, 0);
+  }, []);
   async function currentLocationSubmit(e) {
     e.preventDefault();
     let { current, location } = await searchedLocation(
       `${locationData.latitude},${locationData.longitude}`
     );
 
-    console.log(current);
-    console.log(location);
+    
+    setWeatherReport((prevData) => ({
+      ...prevData,
+      current: current,
+      location: location,
+    }));
+    // console.log(WeatherReport.current);
+    // console.log(WeatherReport.location);
   }
+  // setTimeout(() => {
+  // }, 5000);
 
   return (
     <button

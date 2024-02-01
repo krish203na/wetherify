@@ -76,7 +76,7 @@ const CurrentLocation = () => {
         target="blank"
         title="Author: Krishna"
         href="https://github.com/krish203na"
-        className="w-[50px] rounded-full overflow-hidden"
+        className="w-[50px] rounded-full overflow-hidden hidden sm:block"
       >
         <img src="./Krishna.jpeg" alt="" />
       </a>

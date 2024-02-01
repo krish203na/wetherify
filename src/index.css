@@ -8,6 +8,10 @@ font-family: 'Rowdies', sans-serif;
 .numbers{
     font-family: 'Rubik', sans-serif;
 }
+#highlightImgInBack
+{
+    background-image: url("./weather/64x64/day/179.png");
+}
 
 /* .enter{
     animation:enterAnimation .5s ease-in-out forwards ;

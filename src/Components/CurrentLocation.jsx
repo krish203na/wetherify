@@ -43,22 +43,26 @@ const CurrentLocation = () => {
         forecast: forecast,
         alerts: alerts,
       }));
-
+      console.log(current);
+      console.log(location);
+      console.log(forecast);
+      console.log(alerts);
     }
     starter();
     // }, 0);
   }, []);
   async function currentLocationSubmit(e) {
     e.preventDefault();
-    let { current, location } = await searchedLocation(
+    let { current, location, forecast, alerts } = await searchedLocation(
       `${locationData.latitude},${locationData.longitude}`
     );
 
-    
     setWeatherReport((prevData) => ({
       ...prevData,
       current: current,
       location: location,
+      forecast: forecast,
+      alerts: alerts,
     }));
     // console.log(WeatherReport.current);
     // console.log(WeatherReport.location);

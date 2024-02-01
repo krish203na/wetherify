@@ -71,14 +71,24 @@ const CurrentLocation = () => {
   // }, 5000);
 
   return (
-    <button
-      onClick={currentLocationSubmit}
-      className="flex items-center justify-center gap-2 shadow-xl rounded-xl bg-[#414097] text-white px-3 mx-[12px]"
-      type="submit"
-    >
-      <i className="fa-sharp fa-solid fa-location-crosshairs"></i>
-      <span className="hidden md:block">current Location</span>
-    </button>
+    <div className="flex items-center justify-center gap-2 h-full sm:ml-[15px]">
+      <a
+        target="blank"
+        title="Author: Krishna"
+        href="https://github.com/krish203na"
+        className="w-[50px] rounded-full overflow-hidden hidden sm:block"
+      >
+        <img src="./Krishna.jpeg" alt="" />
+      </a>
+      <button
+        onClick={currentLocationSubmit}
+        className="flex min-w-[50px] items-center justify-center h-full gap-2 shadow-xl rounded-xl bg-[#414097] text-white px-3 mx-[12px]"
+        type="submit"
+      >
+        <i className="fa-sharp fa-solid fa-location-crosshairs"></i>
+        <span className="hidden md:block">current Location</span>
+      </button>
+    </div>
   );
 };
 

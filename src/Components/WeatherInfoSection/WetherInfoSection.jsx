@@ -107,6 +107,48 @@ const WetherInfoSection = () => {
     }
   }
 
+  function visibility(){
+    if (parseInt(WeatherReport.current.vis_km) <= 5) {
+      return `💨 foggy`
+    }
+    else if (
+      parseInt(WeatherReport.current.vis_km) > 5 &&
+      parseInt(WeatherReport.current.vis_km) <= 10
+    ) {
+      return `👍 modrate`;
+    }
+    else if (
+      parseInt(WeatherReport.current.vis_km) > 10 &&
+      parseInt(WeatherReport.current.vis_km) <= 15
+    ) {
+      return `😐 avarage`;
+    }
+    else if (
+      parseInt(WeatherReport.current.vis_km) > 15 &&
+      parseInt(WeatherReport.current.vis_km) <= 20
+    ) {
+      return `👍 fine`;
+    }
+    else if (
+      parseInt(WeatherReport.current.vis_km) > 20 &&
+      parseInt(WeatherReport.current.vis_km) <= 25
+    ) {
+      return `🙂 good`;
+    }
+    else if (
+      parseInt(WeatherReport.current.vis_km) > 25 &&
+      parseInt(WeatherReport.current.vis_km) <= 30
+    ) {
+      return `😀 vary good`;
+    }
+    else if (
+      
+      parseInt(WeatherReport.current.vis_km) > 30
+    ) {
+      return `🤩 Excellent`;
+    }
+  }
+
   function checkair() {
     return Object.values(WeatherReport.current.air_quality);
     // .find(
@@ -362,7 +404,7 @@ const WetherInfoSection = () => {
             </div>
             <div>
               <h1 className="enter2 ">
-                <span className="pl-[10%] text-xl">😒</span>Avarage
+                <span className="pl-[10%] text-xl">{visibility()}</span>
               </h1>
             </div>
           </div>

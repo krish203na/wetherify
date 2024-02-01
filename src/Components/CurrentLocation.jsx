@@ -71,7 +71,7 @@ const CurrentLocation = () => {
   // }, 5000);
 
   return (
-    <div className="flex items-center justify-center gap-2 h-full">
+    <div className="flex items-center justify-center gap-2 h-full sm:ml-[15px]">
       <a
         target="blank"
         title="Author: Krishna"
@@ -82,7 +82,7 @@ const CurrentLocation = () => {
       </a>
       <button
         onClick={currentLocationSubmit}
-        className="flex items-center justify-center h-full gap-2 shadow-xl rounded-xl bg-[#414097] text-white px-3 mx-[12px]"
+        className="flex min-w-[50px] items-center justify-center h-full gap-2 shadow-xl rounded-xl bg-[#414097] text-white px-3 mx-[12px]"
         type="submit"
       >
         <i className="fa-sharp fa-solid fa-location-crosshairs"></i>

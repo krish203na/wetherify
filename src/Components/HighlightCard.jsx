@@ -6,47 +6,13 @@ import { useGSAP } from "@gsap/react";
 const HighlightCard = () => {
   const { WeatherReport, setWeatherReport } = useContext(ApiContext);
 
-  // function iconAddress() {
-  //   if (WeatherReport.forecast.forecastday.length !== 0) {
-  //     // console.log("woking")
-  //     return WeatherReport.current.condition.text;
-  //   } else {
-  //     console.log("not working");
-  //   }
-  // }
-  // function maxTemp() {
-  //   if (WeatherReport.forecast.forecastday.length !== 0) {
-  //     // console.log("woking")
-  //     // console.log("maxtemp: ",WeatherReport.forecast.forecastday[0].day.data)
-  //     return WeatherReport.forecast.forecastday[0].day.maxtemp_c;
-  //   } else {
-  //     console.log("not working");
-  //   }
-  // }
   function getResult(dataFunc) {
     if (WeatherReport.forecast.forecastday.length !== 0) {
-      // console.log("woking")
-      // console.log("maxtemp: ",WeatherReport.forecast.forecastday[0].day.data)
       return dataFunc();
     } else {
       console.log("not working");
     }
   }
-
-  // function name(add) {
-  //   let ele = document.getElementById("highlightImgInBack");
-  //   ele.style.backgroundImage = `url(${add})`
-  // }
-
-  // function icon() {
-  //   if (WeatherReport.forecast.forecastday.length !== 0) {
-  //     // console.log("woking")
-  //     return `.${WeatherReport.current.condition.icon.slice(20,52)}`
-  //     ;
-  //   } else {
-  //     console.log("not working");
-  //   }
-  // }
 
   useEffect(() => {
     let t1 = gsap.timeline();
@@ -55,7 +21,6 @@ const HighlightCard = () => {
       {
         opacity: 0,
         y: 30,
-        // animationTimingFunction:"linear"
       },
       {
         duration: 0.6,
@@ -74,7 +39,6 @@ const HighlightCard = () => {
         delay: 0.2,
         opacity: 1,
         y: 0,
-        // delay:0.8
       }
     );
     gsap.fromTo(
@@ -88,7 +52,6 @@ const HighlightCard = () => {
         delay: 0.4,
         opacity: 1,
         y: 0,
-        // delay:0.8
       }
     );
     gsap.fromTo(
@@ -102,7 +65,6 @@ const HighlightCard = () => {
         delay: 0.6,
         opacity: 1,
         y: 0,
-        // delay:0.8
       }
     );
     gsap.fromTo(
@@ -116,13 +78,11 @@ const HighlightCard = () => {
         delay: 0.8,
         opacity: 1,
         y: 0,
-        // delay:0.8
       }
     );
   });
 
   return (
-    // <section className="w-full h-full flex lg:flex-row flex-col">
     <aside
       id="leftSide"
       className="lg:w-[30%] lg:m-0 m-auto xl:w-[25%] w-[90%] lg:min-h-[99.6vh] h-[100%] relative bg-none lg:bg-gradient-to-br from-[#8686e9] from-20%  to-[#414097] to-75% lg:rounded-e-xl lg:rounded-s-none rounded-xl drop-shadow-[10px_10px_10px_rgba(0,0,0,0.15)]"
@@ -131,12 +91,6 @@ const HighlightCard = () => {
         id="HighlightImg"
         className="lg:py-[25px] pb-[30px] pt-0 lg:mt-8 mt-0 overflow-hidden absolute md:top-[0px] md:-left-[140px] sm:-left-[140px] -left-[20vw] md:w-[80vw]  w-[90vw] lg:w-[100%] lg:static"
       >
-        {/* <div
-          id="highlightImgInBack"
-          className={`w-full h-[200px] bg-cover bg-center bg-[url(${getResult(
-            () => `.${WeatherReport.current.condition.icon.slice(20, 52)}`
-          )}`}
-        ></div> */}
         <img
           className="w-[full] lg:drop-shadow-[10px_10px_10px_rgba(0,0,0,0.15)] drop-shadow-[10px_10px_10px_rgba(0,0,0,0.30)]"
           src={getResult(
@@ -179,7 +133,6 @@ const HighlightCard = () => {
                 className={`numbers truncate xl:text-[1.8vw] lg:text-[2.5vw] sm:text-[3vw] text-[4vw] leading-tight `}
               >
                 {getResult(() => WeatherReport.location.localtime.slice(0, 10))}
-                {/* {WeatherReport.location.localtime.slice(0,10)} */}
               </h1>
             </div>
           </div>
@@ -218,15 +171,6 @@ const HighlightCard = () => {
         </div>
       </div>
     </aside>
-    //   <aside id="rightSide" className="w-[75%] bg-purple-600">
-    //     {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque
-    //     repudiandae earum eveniet exercitationem facere eaque accusamus velit
-    //     doloribus unde non dignissimos expedita sequi magnam laudantium
-    //     praesentium, nobis quasi. Maxime sint commodi repudiandae deserunt
-    //     ratione magnam, fugit eligendi quod! Deleniti placeat recusandae totam
-    //     aut reiciendis consequuntur adipisci ea consectetur, quidem fuga? */}
-    //   </aside>
-    // </section>
   );
 };
 

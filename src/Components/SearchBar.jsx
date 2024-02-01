@@ -16,7 +16,6 @@ const SearchBar = () => {
 
         setSearchingData((previousData)=>({...previousData, [name]:value}))
 
-        // console.log(value)
     }
 
     async function searchSubmit(e) {
@@ -32,10 +31,6 @@ const SearchBar = () => {
           forecast: forecast,
           alerts: alerts,
         }));
-        console.log(current)
-        console.log(location)
-        console.log(forecast);
-        console.log(alerts);
     }
 
 

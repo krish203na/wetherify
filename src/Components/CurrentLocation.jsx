@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import ApiContext from "../Context/ApiContext";
 
-// getLocation();
-
 const CurrentLocation = () => {
   const { searchedLocation, WeatherReport, setWeatherReport } =
     useContext(ApiContext);
@@ -27,11 +25,9 @@ const CurrentLocation = () => {
     }));
   }
   useEffect(() => {
-    // setTimeout(() => {
     getLocation();
 
     async function starter() {
-      // console.log(locationData.latitude);
       let { current, location, forecast, alerts } = await searchedLocation(
         `Maharashtra`
       );
@@ -43,13 +39,8 @@ const CurrentLocation = () => {
         forecast: forecast,
         alerts: alerts,
       }));
-      console.log(current);
-      console.log(location);
-      console.log(forecast);
-      console.log(alerts);
     }
     starter();
-    // }, 0);
   }, []);
   async function currentLocationSubmit(e) {
     e.preventDefault();
@@ -64,11 +55,7 @@ const CurrentLocation = () => {
       forecast: forecast,
       alerts: alerts,
     }));
-    // console.log(WeatherReport.current);
-    // console.log(WeatherReport.location);
   }
-  // setTimeout(() => {
-  // }, 5000);
 
   return (
     <div className="flex items-center justify-center gap-2 h-full sm:ml-[15px]">

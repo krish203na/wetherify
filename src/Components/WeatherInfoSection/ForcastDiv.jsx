@@ -9,7 +9,6 @@ const ForcastDiv = (props) => {
       "#forCastList",
       {
         position: "absolute",
-        // x:-1000,
         rotateY:0
       },
       {

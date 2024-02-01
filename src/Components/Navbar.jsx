@@ -12,7 +12,7 @@ const Navbar = () => {
           Wetherif!
         </h1>
       </div>
-      <div className="flex xl:gap-[18vw]">
+      <div className="flex xl:gap-[15vw]">
         <SearchBar />
         <CurrentLocation />
       </div>

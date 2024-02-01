@@ -27,8 +27,7 @@ const ApiContextProvider = ({ children }) => {
      return data;
      
    } catch (error) {
-    console.error("Fetch error:", error);
-     alert("this city is not present")
+    alert("this city is not present")
    }
   }
 

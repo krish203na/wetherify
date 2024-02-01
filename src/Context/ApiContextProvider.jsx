@@ -33,7 +33,7 @@ const ApiContextProvider = ({ children }) => {
   async function searchedLocation(searchingCity){
    try {
      let apiResponce = await fetch(
-       `http://api.weatherapi.com/v1/forecast.json?key=ddb2c3102a954812b3f132205242601&q=${searchingCity}&days=7&aqi=yes&alerts=yes`
+       `https://api.weatherapi.com/v1/forecast.json?key=ddb2c3102a954812b3f132205242601&q=${searchingCity}&days=7&aqi=yes&alerts=yes`
      );
 
      if (!apiResponce.ok) {

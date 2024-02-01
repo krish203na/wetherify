@@ -20,7 +20,7 @@ const ApiContextProvider = ({ children }) => {
 
      if (!apiResponce.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
-       alert("this city is not present")
+       
      }
 
      let data = await apiResponce.json();
@@ -28,7 +28,7 @@ const ApiContextProvider = ({ children }) => {
      
    } catch (error) {
     console.error("Fetch error:", error);
-     console.log("catch");
+     alert("this city is not present")
    }
   }
 

@@ -121,17 +121,13 @@ const WetherInfoSection = () => {
   function getResult(dataFunc) {
     if (WeatherReport.forecast.forecastday.length !== 0) {
       return dataFunc();
-    } else {
-      console.log("not working");
-    }
+    } 
   }
 
   function air() {
     if (WeatherReport.forecast.forecastday.length !== 0) {
       return checkair()[6];
-    } else {
-      console.log("not working");
-    }
+    } 
   }
 
   useEffect(() => {

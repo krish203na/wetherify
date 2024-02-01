@@ -9,9 +9,7 @@ const HighlightCard = () => {
   function getResult(dataFunc) {
     if (WeatherReport.forecast.forecastday.length !== 0) {
       return dataFunc();
-    } else {
-      console.log("not working");
-    }
+    } 
   }
 
   useEffect(() => {
@@ -107,9 +105,9 @@ const HighlightCard = () => {
           <h1 className="animation_enter numbers xl:text-[5.5vw] lg:text-[6vw] md:text-[9vw] sm:text-[11vw] text-[9vw] sm:mr-0 font-semibold sm:mb-4 mb-0 leading-none lg:w-full w-[45%] text-right lg:text-left ">
             {getResult(() => `${WeatherReport.current.temp_c}*`)}
             <span className="xl:text-[4vw] md:text-[6vw]">C</span>
-            <h1 className="md:text-3xl text-xl text-[#e4eaea] truncate">
+            <div className="md:text-3xl text-xl text-[#e4eaea] truncate">
               {getResult(() => WeatherReport.current.condition.text)}
-            </h1>
+            </div>
           </h1>
           <div className="text-left sm:my-4 lg:w-full sm:w-[45%] w-[45%]">
             <div className="animation_enter2 opacity-0 flex gap-3 mb-3 items-center">

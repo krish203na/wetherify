@@ -86,13 +86,13 @@ Weatherif is a sleek and responsive weather application that provides detailed w
 ### Tab version
 
 <img
-        src="public/images/wetherif!Tab.png"
+        src="public/wetherif!Tab.png"
       />
 
 ### Computer version
 
 <img
-        src="public/images/weatherif!Comp.png"
+        src="public/weatherif!Comp.png"
       />
 
 ## Contributing

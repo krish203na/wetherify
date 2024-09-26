@@ -1,5 +1,9 @@
 # Weatherif!
 
+<img
+        src="public/weatherif!Comp.png"
+      />
+
 Weatherif is a sleek and responsive weather application that provides detailed weather forecasts. Developed using modern web technologies, Weatherif delivers accurate weather information including temperature, UV index, wind status, sunrise and sunset times, humidity, visibility, air quality, and a 3-day temperature forecast.
 
 ## Table of Contents
